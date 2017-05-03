@@ -13,6 +13,7 @@ import NonExistingPath from './components/NonExistingPath.jsx';
 import Legal from './components/Legal.jsx';
 import Contact from './components/Contact.jsx';
 import User from './components/User.jsx';
+import ViewRepository from './components/ViewRepository.jsx';
 import 'bootstrap/dist/css/bootstrap-theme.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -37,6 +38,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Root} />
               <Route pathName="user" path="/user/:userName" component={User} />
+              <Route pathName="repository" path="/repository/:userName/:repoName" component={ViewRepository} />
               <Route pathName="contact" path="/contact" component={Contact} />
               <Route pathName="about" path="/about" component={About} />
               <Route pathName="legal" path="/legal" component={Legal} />

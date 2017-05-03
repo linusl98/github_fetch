@@ -129,7 +129,7 @@ class Repositories extends Component {
                 </tr>
                 {this.state.repositories.map(item => (
                   <tr key={item.id}>
-                    <td><a href={item.html_url} target="_blank">{item.name}</a></td>
+                    <td><Link to={`/repository/${item.owner.login}/${item.name}`}>{item.name}</Link></td>
                     <td><Link to={`/user/${item.owner.login}`}>{item.owner.login}</Link></td>
                     <td>{item.default_branch}</td>
                     <td>{item.language}</td>
