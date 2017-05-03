@@ -12,7 +12,7 @@ function FieldGroup({ id, label, help, ...props }) {
 }
 
 const Contact = () => (
-  <Grid style={{ minHeight: '100%' }}>
+  <Grid style={{ paddingBottom: 100 }}>
     <Row style={{ margin: 5 }}>
       <h1>Contact</h1>
       <hr />

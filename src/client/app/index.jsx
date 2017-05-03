@@ -31,9 +31,9 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div>
           <TopMenu />
-          <div style={{ paddingTop: '51px', display: 'flex', flex: '10' }}>
+          <div style={{ paddingTop: '51px' }}>
             <Switch>
               <Route exact path="/" component={Root} />
               <Route pathName="user" path="/user/:userName" component={User} />
@@ -44,8 +44,8 @@ class App extends Component {
               <Route path="*" component={NonExistingPath} />
             </Switch>
           </div>
-          <div className="footer" style={{ display: 'flex', flex: '1' }}>
-            <Navbar>
+          <div className="footer">
+            <Navbar fixedBottom>
               <Nav>
                 <NavItem eventKey={1} href="/legal">Legal</NavItem>
                 <NavItem eventKey={2} href="/contact">Contact</NavItem>
